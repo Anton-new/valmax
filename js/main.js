@@ -23,7 +23,7 @@
     const menuLinks = document.querySelectorAll('.nav__link');
     let blur;
     
-    burger.addEventListener('click', () => {
+    function burgerClick () {
 
         // Влияет на blur у создаваемого дива
         header.classList.remove('header__active'); 
@@ -33,26 +33,26 @@
         header.appendChild(blur);
         menu.classList.add('header__nav__active');
         hideScroll();
-    });
-    menuCloseItem.addEventListener('click', () => {
+        menuLinks.forEach(each => {each.addEventListener('click', linkClick)});       
+    };
+
+    function linkClick () {
         menu.classList.remove('header__nav__active');
-        if (window.pageYOffset > 84) {
-            header.classList.add('header__active');
-        }
+        header.removeChild(blur);
+        header.classList.add('header__active');
+        menu.addEventListener('transitionend', showScrollafterBurger);
+        menuLinks.forEach(each => {each.removeEventListener('click', linkClick)});
+    };
+
+    function closeClick () {
+        menu.classList.remove('header__nav__active');
+        if (window.pageYOffset > 84) {header.classList.add('header__active')}
         header.removeChild(blur);
         menu.addEventListener('transitionend', showScrollafterBurger);
-    });
+    };
     
-    if (window.innerWidth < 900) {
-        for (let i = 0; i <= menuLinks.length - 1; i++) {
-            menuLinks[i].addEventListener('click', () => {
-                menu.classList.remove('header__nav__active');
-                header.removeChild(blur);
-                header.classList.add('header__active');
-                menu.addEventListener('transitionend', showScrollafterBurger);
-            });
-        }
-    }
+    burger.addEventListener('click', burgerClick);
+    menuCloseItem.addEventListener('click', closeClick)
 }());
 
 // Smooth scroll
@@ -83,14 +83,12 @@
 
     };
 
-    const scrollTo = function () 
-    {
+    const scrollTo = function () {
         const links = document.querySelectorAll('.js-scroll');
-        links.forEach(each => {
-            each.addEventListener('click', function () {
-                const currentTarget = this.getAttribute('href');
-                smoothScroll(currentTarget, 1000);
-            });
+        links.forEach(each => {each.addEventListener('click', function () {
+            const currentTarget = this.getAttribute('href');
+            smoothScroll(currentTarget, 1000);
+            })
         });
     };
     scrollTo();
