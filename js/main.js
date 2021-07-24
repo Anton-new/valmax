@@ -21,14 +21,25 @@
     const menu = document.querySelector('.header__nav');
     const menuCloseItem = document.querySelector('.header__nav__close');
     const menuLinks = document.querySelectorAll('.nav__link');
+    let blur;
+    
     burger.addEventListener('click', () => {
-        header.classList.remove('header__active');
+
+        // Влияет на blur у создаваемого дива
+        header.classList.remove('header__active'); 
+
+        blur = document.createElement('div');
+        blur.classList.add('header__nav__blur');
+        header.appendChild(blur);
         menu.classList.add('header__nav__active');
         hideScroll();
     });
     menuCloseItem.addEventListener('click', () => {
         menu.classList.remove('header__nav__active');
-        header.classList.add('header__active');
+        if (window.pageYOffset > 84) {
+            header.classList.add('header__active');
+        }
+        header.removeChild(blur);
         menu.addEventListener('transitionend', showScrollafterBurger);
     });
     
@@ -36,6 +47,7 @@
         for (let i = 0; i <= menuLinks.length - 1; i++) {
             menuLinks[i].addEventListener('click', () => {
                 menu.classList.remove('header__nav__active');
+                header.removeChild(blur);
                 header.classList.add('header__active');
                 menu.addEventListener('transitionend', showScrollafterBurger);
             });
@@ -569,7 +581,6 @@ const header = document.querySelector('.header');
 function hideScroll () {
     
     const getScrollbarWidth = window.innerWidth - document.documentElement.clientWidth;;
-    header.style.transition = '0s';
     header.style.paddingRight = `${getScrollbarWidth}px`;
     document.body.style.paddingRight = `${getScrollbarWidth}px`;
     circles.style.paddingRight = `${getScrollbarWidth}px`;
@@ -585,8 +596,6 @@ function showScrollafterModal (event) {
     document.body.style.overflowY = 'visible';
 
     document.querySelector('.form__dialog').removeEventListener('transitionend', showScrollafterModal); 
-
-    setTimeout(() => header.style.transition = '.5s', 100);
 }
 
 function showScrollafterPortfolio (event) {
@@ -597,8 +606,6 @@ function showScrollafterPortfolio (event) {
     document.body.style.overflowY = 'visible';
 
     document.querySelector('.portfolio__slider').removeEventListener('transitionend', showScrollafterPortfolio); 
-
-    setTimeout(() => header.style.transition = '.5s', 100);
 }
 
 function showScrollafterBurger (event) {
@@ -609,6 +616,4 @@ function showScrollafterBurger (event) {
     document.body.style.overflowY = 'visible';
 
     document.querySelector('.header__nav').removeEventListener('transitionend', showScrollafterBurger); 
-
-    setTimeout(() => header.style.transition = '.5s', 100);
 }
