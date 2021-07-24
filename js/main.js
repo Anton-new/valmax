@@ -395,7 +395,10 @@
 
         let x1;
         let x2;
+        let y1;
+        let y2;
         let xDiff;
+        let yDiff;
         const cards = document.querySelectorAll('.cards__item');
 
         cards.forEach(function (element, index, array) { 
@@ -406,15 +409,20 @@
 
         function touchStart (event) {
             x1 = event.touches[0].clientX;
+            y1 = event.touches[0].clientY;
         }
         function touchMove (event) {
             x2 = event.touches[0].clientX;
+            y2 = event.touches[0].clientY;
+            
             xDiff = x1 - x2;
+            yDiff = y1 - y2;
+            console.log(xDiff, yDiff);
         }
         function touchEnd (event) {
-            if (xDiff > 0) {
+            if (xDiff > 0 && xDiff > Math.abs(yDiff)) {
                     changeRight();
-                } else {
+                } else if (xDiff < 0 && Math.abs(xDiff) > Math.abs(yDiff)) {
                     changeLeft();
                 }
         }
