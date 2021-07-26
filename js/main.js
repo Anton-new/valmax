@@ -97,19 +97,22 @@
 // Circles
 
 (function () {
+    
+
+    
+    // console.log();
 
     function scrollcircle () {
-        
+
         const circle = document.querySelectorAll('.circle');
-        const a = document.querySelector('.main-page').clientHeight;
-        const b = document.querySelector('.creative-page').clientHeight;
-        const c = document.querySelector('.cards-page').clientHeight;
-        const d = document.querySelector('.portfolio').clientHeight;
-        const e = document.querySelector('.info').clientHeight;
+        const a = document.querySelector('.main-page').scrollHeight;
+        const b = document.querySelector('.creative-page').scrollHeight;
+        const c = document.querySelector('.cards-page').scrollHeight;
+        const d = document.querySelector('.portfolio').scrollHeight;
+        const e = document.querySelector('.info').scrollHeight;
+        console.log(a,b,c,d,e);
 
-        // console.log(a,b,c,d,e);
-
-        if (window.pageYOffset < (a/2) || (window.pageYOffset == 0)) {
+        if (window.pageYOffset < (a/2) || (window.pageYOffset === 0)) {
             circle[0].style.opacity = '100%';
         } else {
             circle[0].style.opacity = '20%';
@@ -180,7 +183,7 @@
             }
         }
     }
-    window.addEventListener(`resize`, adaptiveMainpage);
+    window.addEventListener('resize', adaptiveMainpage);
     document.addEventListener("DOMContentLoaded", adaptiveMainpage);
 }());
 
@@ -349,7 +352,7 @@
     }
 
     adaptiveCards();
-    window.addEventListener(`resize`, adaptiveCards);
+    window.addEventListener('resize', adaptiveCards);
 }());
 
 
@@ -438,7 +441,7 @@
         }
 
     changeCards();
-    window.addEventListener(`resize`, changeCards);
+    window.addEventListener('resize', changeCards);
 }());
 
 // Form validation
