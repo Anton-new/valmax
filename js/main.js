@@ -582,8 +582,8 @@ function hideScroll () {
     circles.style.paddingRight = `${getScrollbarWidth}px`;
     document.body.style.overflowY = 'hidden';
 
-    document.body.addEventListener('touchmove', hideforIOS); 
-}
+    document.body.addEventListener('touchmove', hideforIOS, { passive: false }); 
+} 
 
 function hideforIOS (event) {
     event.preventDefault();
