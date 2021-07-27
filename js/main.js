@@ -97,10 +97,6 @@
 // Circles
 
 (function () {
-    
-
-    
-    // console.log();
 
     function scrollcircle () {
 
@@ -144,7 +140,6 @@
         }
     };
     window.addEventListener('scroll', scrollcircle);
-    // console.log(a,b,c,d,e);
 }());
 
 // Adaptive main-page (Если настроить условия только при запуске, то код значительно уменьшится, так как слушатель resize убирается, а слушаель загрузки Дом-дерева не нужен)
@@ -587,6 +582,11 @@ function hideScroll () {
     circles.style.paddingRight = `${getScrollbarWidth}px`;
     document.body.style.overflowY = 'hidden';
 
+    document.body.addEventListener('touchmove', hideforIOS); 
+}
+
+function hideforIOS (event) {
+    event.preventDefault();
 }
 
 function showScrollafterModal (event) {
@@ -596,6 +596,7 @@ function showScrollafterModal (event) {
     circles.style.paddingRight = '';
     document.body.style.overflowY = 'visible';
 
+    document.body.removeEventListener('touchmove', hideforIOS);
     document.querySelector('.form__dialog').removeEventListener('transitionend', showScrollafterModal); 
 }
 
@@ -606,6 +607,7 @@ function showScrollafterPortfolio (event) {
     circles.style.paddingRight = '';
     document.body.style.overflowY = 'visible';
 
+    document.body.removeEventListener('touchmove', hideforIOS);
     document.querySelector('.portfolio__slider').removeEventListener('transitionend', showScrollafterPortfolio); 
 }
 
@@ -616,5 +618,6 @@ function showScrollafterBurger (event) {
     circles.style.paddingRight = '';
     document.body.style.overflowY = 'visible';
 
+    document.body.removeEventListener('touchmove', hideforIOS);
     document.querySelector('.header__nav').removeEventListener('transitionend', showScrollafterBurger); 
 }
