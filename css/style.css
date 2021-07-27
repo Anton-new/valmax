@@ -249,33 +249,6 @@ img {
     position: relative;
 }
 
-.main__title__fun {
-    border-right: 5px solid #F6F6F6;
-    -webkit-animation: cursor 1s step-end infinite;
-            animation: cursor 1s step-end infinite;
-}
-@-webkit-keyframes cursor {
-    0% {
-        border-color: white;
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: white;
-    }
-}
-@keyframes cursor {
-    0% {
-        border-color: white;
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: white;
-    }
-}
 .main__subtitle {
     max-width: 671px;
     font-weight: 500;
@@ -2159,6 +2132,9 @@ select:hover {
     .portfolio__title {
         font-size: 30px;
     }
+    .portfolio__slider {
+        padding-bottom: 10%;
+}
     .info__title {
         font-size: 30px;
     }
