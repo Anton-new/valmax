@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALMAX</title>
+    <meta name="description" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#ce1180">
+    <meta name="msapplication-TileColor" content="#ce1180">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <!-- Header starts -->
+
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a href="#main-page" class="header_logo_link js-scroll">
+                        <div class="logo__rectangle">
+                            <div class="img__wrapper">
+                                <img src="./img/svg/logo.svg" alt="Valmax" title="Valmax" class="header_img">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    
+                    <ul class="header__nav__list">
+                        <li class="header__logo header__logo__nav">
+                            <div class="logo__rectangle">
+                                <div class="img__wrapper">
+                                    <img src="./img/svg/logo.svg" alt="Valmax" title="Valmax" class="header_img">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#main-page" class="nav__link js-scroll">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#cards-page" class="nav__link js-scroll">Программы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link js-scroll">Портфолио</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#info" class="nav__link js-scroll">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#footer" class="nav__link js-scroll">Контакты</a>
+                        </li>
+                        <li class="nav__item phone-number">
+                            <a href="tel:+79126861246" class="nav__link__media"><img alt="телефон" src="./img/svg/logo_phone.svg"></a>
+                            <a href="tel:+79126861246" class="nav__link nav__link__hide"><img alt="телефон" src="./img/svg/logo_phone.svg" class="phone__img">+79126861246</a>
+                        </li>  
+                    </ul>
+                    <div class="header__nav__close">
+                        <span class="header__nav__close__line"></span>
+                        <span class="header__nav__close__line"></span>
+                    </div>
+                </nav>
+                <div class="header__burger burger__js">
+                    <span class="burger__line burger__line__first"></span>
+                    <span class="burger__line burger__line__second"></span>
+                    <span class="burger__line burger__line__third"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header ends -->
+    <div class="scroll">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <!-- Main starts -->
+
+    <main>
+
+        <!-- Main page starts-->
+
+        <section class="main-page" id="main-page">
+            <div class="wrapper">
+                <div class="main__wrapper">         
+                    <div class="main__section-1">
+                        <div class="main__section-left">
+                            <h1 class="main__title">Здесь начинается территория <br>радости и <br>веселья</h1>
+                            <h3 class="main__subtitle">Агенство детских праздников <br>в Екатеринбурге и Свердловской области</h3>
+                            <button type="button" class="main__button button__js button__modal__js">
+                                <span class="button__container"></span>
+                                <span class="button__text">Заказать праздник</span>
+                            </button>
+                        </div>
+                        <div class="main__img__wrapper">
+                                <span class="main__animation text1">А еще танцев!</span>
+                                <span class="main__animation text2">Пения!</span>
+                                <span class="main__animation text3">И смеха!</span>
+                                <img src="./img/main_picture-min.png" alt="Десткий праздник" title="Улыбайся" class="main__img">                                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__wrap">
+                <div class="form__dialog">
+                    <form action="#!" class="form__fill form__fill__dialog">
+                        <div class="input__wrap-10"><input type="text" name="user-name" class="form__field" id="user-name-0" placeholder="Имя и фамилия"></div>
+                        <div class="input__wrap-20"><input type="text" name="user-phone" class="form__field" id="user-phone-0" placeholder="Номер телефона"></div>
+                        <select class="form__field">
+                            <option disabled selected class="form__field__option">Выберите праздник</option>
+                            <option value="Бэтмен" class="form__field__option">Бэтмен</option>
+                            <option value="Человек-паук" class="form__field__option">Человек-паук</option>
+                            <option value="Черепашка ниндзя" class="form__field__option">Черепашка ниндзя</option>
+                            <option value="Капитан Америка" class="form__field__option">Капитан Америка</option>
+                        </select>
+                        <div class="input__wrap-30"><input type="text" name="user-comment" class="form__field" id="user-comment-0" placeholder="Ваше сообщение"></div>
+                        <button type="submit" class="form__button button__js">
+                            <span class="button__container"></span>
+                            <span class="button__text">Отправить</span>
+                        </button>
+                    </form>
+                    <div class="form__close">
+                        <span class="form__close__line"></span>
+                        <span class="form__close__line"></span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Main page ends -->
+
+        <!-- Creative page starts -->
+
+        <section class="creative-page">
+            <div class="wrapper">
+                <h2 class="creative__title">С креативом и шутками<br> от VALMAX скучно не будет</h2>
+                <h2 class="creative__title creative__title__media">Valmax - это</h2>
+                <div class="creative__wrapper">
+
+                    <div class="creative__img__wrapper">
+                        <img src="./img/creative_pic_1-min.png" alt="Герои" class="creative__img-1">
+                    </div>
+                    <div class="creative__img__wrapper creative__img__wrapper-2">
+                        <img src="./img/creative_pic_2-min.png" alt="Суперлайк" class="creative__img-2">
+                    </div>
+                    <div class="creative__img__wrapper creative__img__wrapper-3">
+                        <img src="./img/creative_pic_3-min.png" alt="Алладин" class="creative__img-3">
+                    </div>
+                    <div class="img__caption img__caption-1">Более 2500 мероприятий</div>
+                    <div class="img__caption img__caption-2">5 лет опыта</div>
+                    <div class="img__caption img__caption-3">Разнообразие программ</div>
+
+                </div>
+                <div class="bg__circle-1"></div>
+                <div class="bg__circle-4"></div>
+            </div>
+        </section>
+
+        <!-- Creative page ends -->
+
+        <!-- Cards page starts -->
+
+        <section class="cards-page" id="cards-page">
+            <div class="wrapper">
+                <h2 class="cards__title">Выбери своего героя</h2>
+                <div class="cards__view-window">
+                   <div class="cards__wrapper">
+                        <div class="cards__item cards__item__batman">
+                            <span class="cards__item__title">Бэтмен</span>
+                            <div class="cards__img__wrapper">
+                                <img src="./img/batman-min.png" alt="Бэтc" class="cards__img__wrapper__pic">
+                            </div>
+                            <button type="button" class="cards__order-button button__js button__modal__js">
+                                <span class="button__container"></span> 
+                                <span class="button__text">Заказать героя</span>
+                            </button>
+                        </div>
+                        <div class="cards__item cards__item__spider">
+                            <span class="cards__item__title">Человек-паук</span>
+                            <div class="cards__img__wrapper">
+                                <img src="./img/spider-man-min.png" alt="Паучок" class="cards__img__wrapper__pic">
+                            </div>
+                            <button type="button" class="cards__order-button button__js button__modal__js">
+                                <span class="button__container"></span> 
+                                <span class="button__text">Заказать героя</span>
+                            </button>
+                        </div>
+                
+                        <div class="cards__item cards__item__turtle">
+                            <span class="cards__item__title">Черепашка ниндзя</span>
+                            <div class="cards__img__wrapper">
+                                <img src="./img/turtle-min.png" alt="Ниндзя" class="cards__img__wrapper__pic">
+                            </div>
+                            <button type="button" class="cards__order-button button__js button__modal__js">
+                                <span class="button__container"></span> 
+                                <span class="button__text">Заказать героя</span>
+                            </button>
+                        </div>
+                        <div class="cards__item cards__item__captain">
+                            <span class="cards__item__title">Капитан Америка</span>
+                            <div class="cards__img__wrapper">
+                                <img src="./img/captain-america-min.png" alt="Кэп" class="cards__img__wrapper__pic">
+                            </div>
+                            <button type="button" class="cards__order-button button__js button__modal__js">
+                                <span class="button__container"></span> 
+                                <span class="button__text">Заказать героя</span>
+                            </button>
+                        </div>
+                    </div> 
+                    <div class="cards__arrow-left">
+                        <img alt="стрелка" src="./img/svg/arrow_left.svg">
+                    </div>
+                    <div class="cards__arrow-right">
+                        <img alt="стрелка" src="./img/svg/arrow_right.svg">
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="cards__bar">
+                    <div class="cards__bar__scroll"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards page ends -->
+
+        <!-- Portfolio page starts -->
+
+        <section class="portfolio" id="portfolio">
+            <div class="wrapper">
+                <h2 class="portfolio__title">Портфолио современных праздников</h2>
+                <div class="portfolio__wrapper">
+                    <div class="portfolio__photo portfolio__photo-1">
+                        <img alt="фото-1" src="./img/1-min.jpg" class="portfolio__photo__pic">
+                    </div>
+                    <div class="portfolio__photo portfolio__photo-2">
+                        <img alt="фото-2" src="./img/2-min.jpg" class="portfolio__photo__pic">
+                    </div>
+                    <div class="portfolio__photo portfolio__photo-3">
+                        <img alt="фото-3" src="./img/3-min.jpg" class="portfolio__photo__pic">
+                    </div>
+                    <div class="portfolio__photo portfolio__photo-4">
+                        <img alt="фото-4" src="./img/4-min.jpg" class="portfolio__photo__pic">
+                    </div>
+                    <div class="portfolio__photo portfolio__photo-5">
+                        <img alt="фото-5" src="./img/5-min.jpg" class="portfolio__photo__pic">
+                    </div>
+                    <div class="portfolio__photo portfolio__photo-6">
+                        <img alt="фото-6" src="./img/6-min.jpg" class="portfolio__photo__pic">
+                    </div>
+                    <div class="portfolio__photo portfolio__photo-7">
+                        <img alt="фото-7" src="./img/7-min.jpg" class="portfolio__photo__pic">
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__slider">
+                <ul class="slides">
+                    <li class="slide"><img alt="фото-1" src="./img/fullsize-1-min.jpg" class="slider__pic"></li>
+                    <li class="slide"><img alt="фото-2" src="./img/fullsize-2-min.jpg" class="slider__pic"></li>
+                    <li class="slide"><img alt="фото-3" src="./img/fullsize-3-min.jpg" class="slider__pic"></li>
+                    <li class="slide"><img alt="фото-4" src="./img/fullsize-4-min.jpg" class="slider__pic"></li>
+                    <li class="slide"><img alt="фото-5" src="./img/fullsize-5-min.jpg" class="slider__pic"></li>
+                    <li class="slide"><img alt="фото-6" src="./img/fullsize-6-min.jpg" class="slider__pic"></li>
+                    <li class="slide"><img alt="фото-7" src="./img/fullsize-7-min.jpg" class="slider__pic"></li>
+                    <li id="previous" class="controls cards__arrow-left"><img alt="стрелка" src="./img/svg/arrow_left.svg"></li>
+                    <li id="next" class="controls cards__arrow-right"><img alt="стрелка" src="./img/svg/arrow_right.svg"></li>
+                </ul>
+                <div class="slider__bottom">
+                    <div id="controls" class="pause">Пауза</div>
+                    <div class="slider__nav__close">
+                            <span class="slider__nav__close__line"></span>
+                            <span class="slider__nav__close__line"></span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Portfolio page ends -->
+
+        <!-- Info page starts -->
+
+        <section class="info" id="info">
+            <div class="wrapper">
+                <h2 class="info__title">О нас</h2>
+                <h3 class="info__subtitle__media">Давайте знакомиться!</h3>
+                <p class="info__text__media">Мы - команда VALMAX, с 2015 года ведем мероприятия - корпоративы, дни рождения, городские действия, детские праздники, фестивали, промоакции, выпускные вечера.</p>
+                <div class="info__wrapper">
+                    <div class="info__section-left">
+                        <h3 class="info__subtitle info__subtitle-1">Давайте знакомиться!</h3>
+                        <p class="info__text">Мы - команда VALMAX, с 2015 года ведем мероприятия - корпоративы, дни рождения, городские действия, детские праздники, фестивали, промоакции, выпускные вечера.</p>
+                        <h3 class="info__subtitle">За годы своей работы нам удалось провести:</h3>
+                        <ul class="info__list">
+                            <li class="info__item">
+                                <p class="info__item__text">Открытие более 50 магазинов сети «Пятерочка»</p>
+                            </li>
+                            <li class="info__item">
+                                <p class="info__item__text">Конкурс профессионального мастерства «Славим человека труда!» Уральского федерального округа 2019 года</p>
+                            </li>
+                            <li class="info__item">
+                                <p class="info__item__text">Самые зажигательные и танцевальные вечера в караоке-баре «Черничные ночи»</p>
+                            </li>
+                            <li class="info__item">
+                                <p class="info__item__text">Мероприятия, посвященные таким праздникам, как: День Святого Валентина, 23 февраля, 8 марта, 9 мая, День защиты детей, День знаний, Новый год и другие</p>
+                            </li>
+                            <li class="info__item">
+                                <p class="info__item__text">Выступление на юбилее моей бабушки до сих пор не могут забыть!</p>
+                            </li>  
+                        </ul>
+                    </div>
+                    <div class="info__section-right">
+                       <div class="info__img__wrapper">
+                            <div class="pic__wrap">
+                                <svg class="pic">
+                                    <defs>
+                                        <path id="testPath" d="M66.5644 442.635C19.983 389.477 -3.57334 319.991 1.07759 249.464C5.72852 178.937 38.2057 113.146 91.3645 66.5644C144.523 19.983 214.009 -3.57334 284.536 1.07759C355.063 5.72852 420.854 38.2057 467.436 91.3645C514.017 144.523 537.573 214.009 532.922 284.536C528.271 355.063 495.794 420.854 442.635 467.436C389.477 514.017 319.991 537.573 249.464 532.922C178.937 528.271 113.146 495.794 66.5644 442.635L66.5644 442.635Z" />
+                                    </defs>
+                                    <!-- <use xlink:href="#testPath" fill="none" stroke="#7aa20d" stroke-width="2"/> -->
+                                    <text class="pic__text" x="100%" y="0">
+                                        <textPath xlink:href="#testPath" startOffset="0">Основатель</textPath> 
+                                    </text> 
+                                </svg>
+                            </div>
+                            <div>
+                                <img alt="основатель" src="./img/valera-min.png" class="info__img">
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info page ends -->
+
+    </main>
+
+    <!-- Main ends -->
+
+    <!-- Footer starts -->
+
+    <footer class="footer" id="footer">
+        <div class="wrapper">
+            <div class="footer__wrapper">
+                <div class="footer__form">
+                    <div class="form__title">Оставить заявку</div>
+                    <form action="#!" class="form__fill">
+                        <div class="input__wrap-1"><input type="text" name="user-name" class="form__field" id="user-name" placeholder="Имя и фамилия"></div>
+                        <div class="input__wrap-2"><input type="text" name="user-phone" class="form__field" id="user-phone" placeholder="Номер телефона"></div>
+                        <div class="input__wrap-3"><input type="text" name="user-comment" class="form__field" id="user-comment" placeholder="Ваше сообщение"></div>
+                        <button type="submit" class="form__button button__js">
+                            <span class="button__container"></span>
+                              <span class="button__text">Отправить</span>
+                            </button>
+                    </form>
+                </div>
+                <div class="footer__contacts">
+                    <div class="contacts__wrapper">
+                       <div class="contacts__title">Контакты</div>
+                        <ul class="footer__list">
+                            <li class="footer__list__item footer__list__item__geo">
+                                <p class="footer__item__text">Екатеринбург</p>
+                            </li>
+                            <li class="footer__list__item footer__list__item__phone">
+                                <p class="footer__item__text">+79126861246</p>
+                            </li>
+                            <li class="footer__list__item footer__list__item__mail">
+                                <p class="footer__item__text">valmax@gmail.ru</p>
+                            </li>
+                            <li class="footer__list__item">
+                                <a href="https://wa.me/79126861246" class="footer__img__social" target="_blank"><img src="./img/svg/whatsapp.svg" alt="whatsapp" class="footer__img__social__pic"></a>
+                                <a href="https://vk.com/valmax_event" class="footer__img__social" target="_blank"><img src="./img/svg/vk.svg" alt="vk" class="footer__img__social__pic"></a>
+                                <a href="https://www.instagram.com/valmax_event/" class="footer__img__social" target="_blank"><img src="./img/svg/instagram.svg" alt="instagram" class="footer__img__social__pic"></a>
+                            </li> 
+                        </ul> 
+                    </div> 
+                </div>
+            </div>
+            <div class="footer__logo">
+                <div class="footer__logo__wrapper">
+                    <div class="logo__rectangle">
+                        <div class="img__wrapper">
+                            <img src="./img/svg/logo.svg" alt="Valmax" title="Valmax" class="header_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </footer>
+    
+    
+    <!-- Footer ends -->
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
