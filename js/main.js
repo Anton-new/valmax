@@ -13,6 +13,7 @@
     window.addEventListener('scroll', changeheader);
 }());
 
+
 // Burger
 
 (function () {
@@ -54,6 +55,7 @@
     burger.addEventListener('click', burgerClick);
     menuCloseItem.addEventListener('click', closeClick)
 }());
+
 
 // Smooth scroll
 
@@ -106,7 +108,6 @@
         const c = document.querySelector('.cards-page').scrollHeight;
         const d = document.querySelector('.portfolio').scrollHeight;
         const e = document.querySelector('.info').scrollHeight;
-        console.log(a,b,c,d,e);
 
         if (window.pageYOffset < (a/2) || (window.pageYOffset === 0)) {
             circle[0].style.opacity = '100%';
@@ -142,6 +143,7 @@
     window.addEventListener('scroll', scrollcircle);
 }());
 
+
 // Adaptive main-page (Если настроить условия только при запуске, то код значительно уменьшится, так как слушатель resize убирается, а слушаель загрузки Дом-дерева не нужен)
 
 (function () {
@@ -173,7 +175,6 @@
                 
                     wrapper.prepend(div);
                 }
-            
                 createwrap(document.querySelector('.main__section-1'));
             }
         }
@@ -181,6 +182,7 @@
     window.addEventListener('resize', adaptiveMainpage);
     document.addEventListener("DOMContentLoaded", adaptiveMainpage);
 }());
+
 
 // Text animation on main-page
 
@@ -246,6 +248,7 @@
         buttonList[i].addEventListener('mousedown', handleButtonClick);
     }
 }());
+
 
 // Portfolio
 
@@ -383,7 +386,6 @@
             position += movePosition;
             change();
             bar.style.transform = `translateY(-50%) translateX(${a -= 100}%)`;
-            console.log(Math.round(position), -(track.scrollWidth - obolochka.clientWidth));
         }   
     }
     function changeRight () {
@@ -392,7 +394,6 @@
             position -= movePosition;
             change();
             bar.style.transform = `translateY(-50%) translateX(${a += 100}%)`;
-            console.log(Math.round(position), -(track.scrollWidth - obolochka.clientWidth));
         }
     }
     function change () {
@@ -425,7 +426,6 @@
             
             xDiff = x1 - x2;
             yDiff = y1 - y2;
-            console.log(xDiff, yDiff);
         }
         function touchEnd (event) {
             if (xDiff > 0 && xDiff > Math.abs(yDiff)) {
@@ -438,6 +438,7 @@
     changeCards();
     window.addEventListener('resize', changeCards);
 }());
+
 
 // Form validation
 
@@ -463,7 +464,6 @@
             field1Wrap = document.querySelector('.input__wrap-1');
             field2Wrap = document.querySelector('.input__wrap-2');
             form = document.querySelector('.footer__form .form__fill');
-            console.log('bottom');
         } else {
             c = false;
             field1 = document.querySelector('#user-name-0');
@@ -472,7 +472,6 @@
             field1Wrap = document.querySelector('.input__wrap-10');
             field2Wrap = document.querySelector('.input__wrap-20');
             form = document.querySelector('.form__dialog .form__fill');
-            console.log('top');
         }
 
         const userName = field1.value;
@@ -480,7 +479,6 @@
         const userComment = field4.value;
 
         event.preventDefault();
-        console.log(userName, userPhone);
 
         function checkName (regName, userName) {
             if (!regName.test(userName)) {
@@ -506,11 +504,9 @@
             return new Promise(resolve => setTimeout(resolve, 2000));
         }
         async function sendData (a, b) {
-            console.log(a, b);
             if (a && b) {
                 // Отправка формы
                 form.classList.add('sending');
-                console.log('Данные отправляются');
                 await wait();
                 form.classList.remove('sending');
                 form.reset();
@@ -523,7 +519,7 @@
                 field1.style.backgroundColor = 'rgba(227, 216, 11, 0.4)';
                 field2.style.backgroundColor = 'rgba(227, 216, 11, 0.4)';
             } else {
-                console.log('Что-то не верно');
+                // Что-то не верно
             }
         }
 
@@ -567,6 +563,7 @@
         }
     });
 }());
+
 
 // Scroll
 
